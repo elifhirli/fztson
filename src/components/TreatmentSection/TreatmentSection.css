@@ -1,0 +1,51 @@
+.treatments-section {
+  padding: 96px 32px;
+  background-color: #f7f9fc;
+}
+
+.treatments-container {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.treatments-header {
+  max-width: 700px;
+  margin-bottom: 42px;
+}
+
+.section-badge {
+  display: inline-flex;
+  margin-bottom: 16px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  color: #0b7f7a;
+  background-color: #e8f7f5;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.treatments-header h2 {
+  margin: 0;
+  color: #0b2a4a;
+  font-size: 42px;
+  line-height: 1.1;
+}
+
+.treatments-header p {
+  margin-top: 16px;
+  color: #526173;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.treatments-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+
+@media (max-width: 900px) {
+  .treatments-grid {
+    grid-template-columns: 1fr;
+  }
+}

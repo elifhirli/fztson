@@ -1,0 +1,8 @@
+html {
+  scroll-behavior: smooth;
+}
+
+main section {
+  min-height: 600px;
+  padding: 80px 32px;
+}
