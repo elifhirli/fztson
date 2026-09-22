@@ -4,7 +4,20 @@ import AnatomySelector from './components/AnatomySelector/AnatomySelector';
 import AboutExpertise from './components/AboutExpertise/AboutExpertise';
 import ContactSection from './components/ContactSection/ContactSection';
 import Footer from './components/Footer/Footer';
+import TreatmentDetail from './components/TreatmentDetail/TreatmentDetail';
 function App(){
+    const detailMatch = window.location.pathname.match(/^\/tedaviler\/([^/]+)\/?$/);
+
+    if (detailMatch) {
+        return (
+            <>
+                <Header/>
+                <TreatmentDetail slug={decodeURIComponent(detailMatch[1])}/>
+                <Footer/>
+            </>
+        );
+    }
+
     return(
         <>
         <Header/>

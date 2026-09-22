@@ -9,7 +9,7 @@ function Hero(){
                     <h1>
                        
                         <span className='hero-title-line'></span>
-                        <span>Dr.Seyithan Hırlı</span>
+                        <span>Fizyoterapist Seyit Han Hırlı</span>
                     </h1>
                     <ol className='hero-list'>
                         <li>menisküs</li>
@@ -31,7 +31,7 @@ function Hero(){
                 <div className='hero-image-wrapper'>
                     <img
                         src="/src/assets/images/seyit.png"
-                        alt="Dr. Seyithan Hırlı klinikte çalışırken"
+                        alt="Fizyoterapist Seyit Han Hırlı klinikte çalışırken"
                         className='hero-image' 
                     />
                     

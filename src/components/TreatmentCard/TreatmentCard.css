@@ -1,94 +1,75 @@
 .treatment-card-modern {
-  overflow: hidden;
-  border-radius: 22px;
+  display: flex;
+  flex-direction: column;
+  min-height: 220px;
+  padding: 22px;
+  border-top: 3px solid #087b73;
+  border-radius: 8px;
   background-color: #ffffff;
-  box-shadow: 0 10px 30px rgba(17, 24, 39, 0.08);
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
+  box-shadow: 0 8px 22px rgba(6, 39, 71, 0.07);
+  color: inherit;
+  text-decoration: none;
+  transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
 .treatment-card-modern:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 18px 40px rgba(17, 24, 39, 0.12);
+  transform: translateY(-3px);
+  box-shadow: 0 13px 28px rgba(6, 39, 71, 0.11);
 }
 
-.treatment-card-image-wrapper {
-  position: relative;
-  height: 220px;
-  overflow: hidden;
-  background-color: #eef2f7;
+.treatment-card-modern:focus-visible {
+  outline: 3px solid rgba(8, 123, 115, 0.3);
+  outline-offset: 4px;
 }
 
-.treatment-card-image-wrapper::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-
-  width: 100%;
-  height: 4px;
-  background: linear-gradient(90deg, #0b2a4a, #0b7f7a);
-}
-
-.treatment-card-image {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.treatment-card-content {
-  padding: 24px 22px 26px;
-}
-
-.treatment-card-category {
-  display: inline-block;
-  margin-bottom: 12px;
-
-  color: #0b7f7a;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+.treatment-card-icon {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  margin-bottom: 16px;
+  border-radius: 6px;
+  color: #087b73;
+  background-color: #dff8f5;
+  font-size: 23px;
+  font-weight: 500;
+  line-height: 1;
 }
 
 .treatment-card-title {
-  margin: 0 0 12px;
-
-  color: #0b2a4a;
-  font-size: 30px;
-  line-height: 1.1;
+  margin: 0 0 10px;
+  color: #062747;
+  font-size: 18px;
   font-weight: 800;
-  letter-spacing: -0.5px;
+  line-height: 1.3;
+  letter-spacing: 0;
 }
 
 .treatment-card-description {
   margin: 0;
-
-  color: #526173;
-  font-size: 15px;
-  line-height: 1.7;
+  color: #40566a;
+  font-size: 13px;
+  line-height: 1.55;
 }
 
 .treatment-card-link {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-
-  margin-top: 22px;
-
-  color: #0b2a4a;
-  font-size: 16px;
+  align-self: flex-start;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 18px;
+  color: #087b73;
+  font-size: 12px;
   font-weight: 800;
   text-decoration: none;
 }
 
 .treatment-card-arrow {
-  transition: transform 0.2s ease;
+  font-size: 17px;
+  transition: transform 180ms ease;
 }
 
-.treatment-card-link:hover .treatment-card-arrow {
-  transform: translateX(4px);
+.treatment-card-modern:hover .treatment-card-arrow {
+  transform: translateX(3px);
 }

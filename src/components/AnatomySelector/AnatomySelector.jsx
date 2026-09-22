@@ -1,78 +1,81 @@
-//seçilen bölgeyi tutar ve tedavileri gösterir
 import { useRef, useState } from 'react';
-import { treatments } from '../../data/treatments';
 import SkeletonSvg from './SkeletonSvg';
+import TreatmentsSection from '../TreatmentSection/TreatmentSection';
 import './AnatomySelector.css';
 
-const regionLabels = {
-  boyun: 'Boyun',
-  omuz: 'Omuz',
-  bel: 'Bel',
-  diz: 'Diz',
-};
+const bodyRegions = [
+  { id: 'cene', label: 'Çene' },
+  { id: 'boyun', label: 'Boyun' },
+  { id: 'omuz', label: 'Omuz' },
+  { id: 'omurga', label: 'Omurga' },
+  { id: 'bel', label: 'Bel ve Sırt' },
+  { id: 'kalca', label: 'Kalça' },
+  { id: 'dirsek', label: 'Dirsek' },
+  { id: 'diz', label: 'Diz' },
+  { id: 'el-bilek', label: 'El & Bilek' },
+  { id: 'ayak-bilek', label: 'Ayak & Bilek' },
+];
 
 function AnatomySelector() {
   const [selectedRegion, setSelectedRegion] = useState('boyun');
-  const treatmentPanelRef = useRef(null);
+  const treatmentsRef = useRef(null);
 
-  const handleRegionSelect = (regionId) => {
+  const showTreatments = (regionId) => {
     setSelectedRegion(regionId);
-
     requestAnimationFrame(() => {
-      treatmentPanelRef.current?.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-      });
+      treatmentsRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   };
-
-  const filteredTreatments = treatments.filter((treatment) =>
-    treatment.regions.includes(selectedRegion)
-  );
 
   return (
     <section id="anatomy" className="anatomy-section">
       <div className="anatomy-container">
-        <div className="anatomy-header">
-          <span className="section-badge">İnteraktif Anatomi Seçici</span>
-          <h2>Ağrı veya hareket kısıtlılığı yaşadığınız bölgeyi seçin</h2>
+        <header className="anatomy-header">
+          <h2>İnteraktif Anatomi Seçici</h2>
           <p>
-            Seçtiğiniz bölgeye göre ilgili hastalıklar ve fizyoterapi yaklaşımları
-            listelenecektir.
+            Rahatsızlık hissettiğiniz bölgeyi iskelet üzerinden seçerek size özel
+            tedavi ve hastalık bilgilerine anında ulaşabilirsiniz.
           </p>
-        </div>
+        </header>
 
         <div className="anatomy-layout">
           <div className="skeleton-panel">
             <SkeletonSvg
               selectedRegion={selectedRegion}
-              onRegionSelect={handleRegionSelect}
+              onRegionSelect={showTreatments}
             />
           </div>
 
-          <div className="treatment-panel" ref={treatmentPanelRef}>
-            <div className="selected-region-box">
-              <span>Seçilen Bölge</span>
-              <h3>{regionLabels[selectedRegion]}</h3>
-            </div>
+          <div className="region-grid" aria-label="Vücut bölgesi seçimi">
+            {bodyRegions.map((region) => (
+              <button
+                key={region.id}
+                type="button"
+                className={`region-button ${
+                  selectedRegion === region.id ? 'active' : ''
+                }`}
+                onClick={() => showTreatments(region.id)}
+                aria-pressed={selectedRegion === region.id}
+              >
+                <span>{region.label}</span>
+                <span className="region-arrow" aria-hidden="true">›</span>
+              </button>
+            ))}
 
-            <div className="treatment-list">
-              {filteredTreatments.map((treatment) => (
-                <article className="treatment-card" key={treatment.id}>
-                  <h4>{treatment.title}</h4>
-                  <p>{treatment.description}</p>
-                  <a href={`#${treatment.slug}`}>Detaylı Bilgi</a>
-                </article>
-              ))}
-            </div>
-
-            {filteredTreatments.length === 0 && (
-              <p className="empty-message">
-                Bu bölge için henüz tedavi içeriği eklenmedi.
-              </p>
-            )}
+            <button
+              type="button"
+              className="show-all-button"
+              onClick={() => showTreatments(null)}
+            >
+              Tümünü Göster
+            </button>
           </div>
         </div>
+
+        <TreatmentsSection
+          selectedRegion={selectedRegion}
+          sectionRef={treatmentsRef}
+        />
       </div>
     </section>
   );
