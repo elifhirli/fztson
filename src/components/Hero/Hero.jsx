@@ -1,4 +1,5 @@
 import './Hero.css';
+import heroImage from '../../assets/images/seyit.png';
  
 function Hero(){
     return(
@@ -30,7 +31,7 @@ function Hero(){
                 
                 <div className='hero-image-wrapper'>
                     <img
-                        src="/src/assets/images/seyit.png"
+                        src={heroImage}
                         alt="Fizyoterapist Seyit Han Hırlı klinikte çalışırken"
                         className='hero-image' 
                     />
