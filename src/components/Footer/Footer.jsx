@@ -1,11 +1,5 @@
 import './Footer.css';
 
-const quickLinks = [
-  { label: 'Hakkımda', href: '/#about' },
-  { label: 'Tedaviler', href: '/#anatomy' },
-  { label: 'İletişim', href: '/#contact' },
-];
-
 const legalLinks = [
   { label: 'Gizlilik Politikası', href: '#gizlilik-politikasi' },
   { label: 'KVKK Aydınlatma Metni', href: '#kvkk' },
@@ -13,12 +7,19 @@ const legalLinks = [
 ];
 
 function Footer() {
+  const homeUrl = import.meta.env.BASE_URL;
+  const quickLinks = [
+    { label: 'Hakkımda', href: `${homeUrl}#about` },
+    { label: 'Tedaviler', href: `${homeUrl}#anatomy` },
+    { label: 'İletişim', href: `${homeUrl}#contact` },
+  ];
+
   return (
     <footer className="site-footer">
       <div className="footer-container">
         <div className="footer-grid">
           <div className="footer-brand">
-            <a className="footer-logo" href="/#top">Fizyoterapist Seyit Han Hırlı</a>
+            <a className="footer-logo" href={`${homeUrl}#top`}>Fizyoterapist Seyit Han Hırlı</a>
             <p>
               Bu site bilgilendirme amaçlıdır, sağlık hizmeti vermez. Tanı ve
               tedavi için uygun sağlık uzmanına danışınız.

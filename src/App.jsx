@@ -6,7 +6,9 @@ import ContactSection from './components/ContactSection/ContactSection';
 import Footer from './components/Footer/Footer';
 import TreatmentDetail from './components/TreatmentDetail/TreatmentDetail';
 function App(){
-    const detailMatch = window.location.pathname.match(/^\/tedaviler\/([^/]+)\/?$/);
+    const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
+    const pathname = window.location.pathname.replace(basePath, '') || '/';
+    const detailMatch = pathname.match(/^\/tedaviler\/([^/]+)\/?$/);
 
     if (detailMatch) {
         return (

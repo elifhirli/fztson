@@ -1,18 +1,20 @@
 import './Header.css';
 
 function Header(){
+    const homeUrl = import.meta.env.BASE_URL;
+
     return(
         <header id="top" className='site-header'>
             <div className='header-container'>
-                <a href="/" className='logo'>
+                <a href={homeUrl} className='logo'>
                 Fizyoterapist Seyit Han Hırlı</a>
             
             <nav className='nav-menu' aria-label="Ana Menü">
-                <a href="/#about">Hakkımda</a>
-                <a href="/#anatomy">Anatomi Seçici</a>
-                <a href="/#treatments">Tedaviler</a>
+                <a href={`${homeUrl}#about`}>Hakkımda</a>
+                <a href={`${homeUrl}#anatomy`}>Anatomi Seçici</a>
+                <a href={`${homeUrl}#treatments`}>Tedaviler</a>
             </nav>
-            <a href="/#contact" className='contact-button'>Bize Ulaşın</a>
+            <a href={`${homeUrl}#contact`} className='contact-button'>Bize Ulaşın</a>
             </div>
         </header>
     );

@@ -5,6 +5,7 @@ import './TreatmentDetail.css';
 function TreatmentDetail({ slug }) {
   const treatment = getTreatmentDetail(slug);
   const [activeApproach, setActiveApproach] = useState('conservative');
+  const homeUrl = import.meta.env.BASE_URL;
 
   useEffect(() => {
     if (!treatment) return undefined;
@@ -30,7 +31,7 @@ function TreatmentDetail({ slug }) {
         <div className="detail-not-found">
           <span>İçerik bulunamadı</span>
           <h1>Aradığınız hastalık sayfasına ulaşılamadı.</h1>
-          <a href="/#treatments">Hastalıklar ve Tedavilere Dön</a>
+          <a href={`${homeUrl}#treatments`}>Hastalıklar ve Tedavilere Dön</a>
         </div>
       </main>
     );
@@ -43,7 +44,7 @@ function TreatmentDetail({ slug }) {
       <section className="detail-hero">
         <div className="detail-container detail-hero-layout">
           <div className="detail-hero-content">
-            <a className="detail-back-link" href="/#treatments">
+            <a className="detail-back-link" href={`${homeUrl}#treatments`}>
               <span aria-hidden="true">←</span> Hastalıklar ve Tedaviler
             </a>
             <span className="detail-region-label">{treatment.regionLabel}</span>
@@ -179,7 +180,7 @@ function TreatmentDetail({ slug }) {
               iletişime geçebilirsiniz.
             </p>
           </div>
-          <a href="/#contact">İletişime Geç <span aria-hidden="true">→</span></a>
+          <a href={`${homeUrl}#contact`}>İletişime Geç <span aria-hidden="true">→</span></a>
         </div>
       </section>
     </main>

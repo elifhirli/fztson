@@ -1,9 +1,11 @@
 import './TreatmentCard.css';
 
 function TreatmentCard({ treatment }) {
+  const treatmentUrl = `${import.meta.env.BASE_URL}tedaviler/${treatment.slug}`;
+
   return (
     <a
-      href={`/tedaviler/${treatment.slug}`}
+      href={treatmentUrl}
       className="treatment-card-modern"
       aria-label={`${treatment.title} detaylarını görüntüle`}
     >
