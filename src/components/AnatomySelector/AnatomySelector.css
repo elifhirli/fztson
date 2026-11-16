@@ -291,6 +291,14 @@
     height: 40px;
   }
 
+  .body-point[data-region='cene'] .point-core {
+    left: calc(50% + 12px);
+  }
+
+  .body-point[data-region='boyun'] .point-core {
+    left: calc(50% - 12px);
+  }
+
   .region-button {
     height: 48px;
     font-size: 15px;
@@ -298,6 +306,12 @@
 
   .show-all-button {
     height: 48px;
+  }
+}
+
+@media (hover: none), (pointer: coarse) {
+  .point-label {
+    display: none;
   }
 }
 

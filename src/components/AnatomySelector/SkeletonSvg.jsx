@@ -1,8 +1,8 @@
 import skeletonImage from '../../assets/images/anatomy-selector-skeleton.webp';
 
 const bodyRegions = [
-  { id: 'cene', label: 'Çene', top: '11.7%', left: '50%', mobileTop: '11.3%', mobileLeft: '39%' },
-  { id: 'boyun', label: 'Boyun', top: '15.2%', left: '50%', mobileTop: '15.8%', mobileLeft: '56%' },
+  { id: 'cene', label: 'Çene', top: '11.7%', left: '50%', mobileTop: '11.3%', mobileLeft: '40%' },
+  { id: 'boyun', label: 'Boyun', top: '15.2%', left: '50%', mobileTop: '15.8%', mobileLeft: '58%' },
   { id: 'omuz', label: 'Omuz', top: '19.7%', left: '66%' },
   { id: 'omurga', label: 'Omurga', top: '30.2%', left: '50%', mobileLeft: '44%' },
   { id: 'bel', label: 'Bel ve Sırt', top: '38.2%', left: '50%', mobileLeft: '56%' },

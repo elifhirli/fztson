@@ -84,6 +84,11 @@
 }
 
 @media (max-width: 640px) {
+  .site-header {
+    position: relative;
+    top: auto;
+  }
+
   .header-container {
     gap: 14px;
     padding: 14px 18px;
