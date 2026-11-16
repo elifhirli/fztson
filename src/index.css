@@ -2,7 +2,12 @@ html {
   scroll-behavior: smooth;
 }
 
-main section {
-  min-height: 600px;
-  padding: 80px 32px;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
 }

@@ -6,17 +6,15 @@ function Hero(){
         <section className='hero-section'>
             <div className='hero-container'>
                 <div className='hero-content'>
-                    <span className='hero-badge'>Fizyoterapi & Rehabilitasyon</span>
+                    <div className='hero-badges'>
+                        <span className='hero-badge'>Fizyoterapi & Rehabilitasyon</span>
+                        <span className='hero-badge hero-badge-secondary'>Özel Sağlık Meslek Hizmet Birimi</span>
+                    </div>
                     <h1>
                        
                         <span className='hero-title-line'></span>
                         <span>Fizyoterapist Seyit Han Hırlı</span>
                     </h1>
-                    <ol className='hero-list'>
-                        <li>menisküs</li>
-                        <li>menisküs</li>
-                    </ol>
-
                     <div className='hero-actions'>
                         <a href='#treatments' className='primary-button'>
                             Tedavileri Keşfet

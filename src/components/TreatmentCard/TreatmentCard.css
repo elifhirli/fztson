@@ -73,3 +73,32 @@
 .treatment-card-modern:hover .treatment-card-arrow {
   transform: translateX(3px);
 }
+
+@media (max-width: 640px) {
+  .treatment-card-modern {
+    min-height: 0;
+    padding: 18px;
+  }
+
+  .treatment-card-icon {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 12px;
+    font-size: 20px;
+  }
+
+  .treatment-card-title {
+    margin-bottom: 7px;
+    font-size: 17px;
+  }
+
+  .treatment-card-description {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .treatment-card-link {
+    margin-top: 16px;
+    padding-top: 0;
+  }
+}

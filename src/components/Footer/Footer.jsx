@@ -1,13 +1,11 @@
 import './Footer.css';
 
-const legalLinks = [
-  { label: 'Gizlilik Politikası', href: '#gizlilik-politikasi' },
-  { label: 'KVKK Aydınlatma Metni', href: '#kvkk' },
-  { label: 'Site Haritası', href: '#site-haritasi' },
-];
-
 function Footer() {
   const homeUrl = import.meta.env.BASE_URL;
+  const legalLinks = [
+    { label: 'Gizlilik Politikası', href: '#gizlilik-politikasi' },
+    { label: 'KVKK Aydınlatma Metni', href: '#kvkk' },
+  ];
   const quickLinks = [
     { label: 'Hakkımda', href: `${homeUrl}#about` },
     { label: 'Tedaviler', href: `${homeUrl}#anatomy` },
@@ -40,7 +38,7 @@ function Footer() {
             </div>
           </div>
 
-          <nav className="footer-column" aria-label="Footer hızlı menü">
+          <nav className="footer-column" aria-label="Hızlı menü">
             <h2>Hızlı Menü</h2>
             <ul>
               {quickLinks.map((link) => (
@@ -61,7 +59,6 @@ function Footer() {
 
         <div className="footer-bottom">
           <p>© {new Date().getFullYear()} Fizyoterapist Seyit Han Hırlı — Tüm Hakları Saklıdır.</p>
-          <p>Modern Medical UI Design</p>
         </div>
       </div>
     </footer>

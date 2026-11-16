@@ -14,6 +14,7 @@ const regionLabels = {
   diz: 'Diz',
   'el-bilek': 'El ve Bilek',
   'ayak-bilek': 'Ayak ve Bilek',
+  diger: 'Diğer',
 };
 
 function TreatmentsSection({ selectedRegion, sectionRef }) {

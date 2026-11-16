@@ -14,14 +14,37 @@ const bodyRegions = [
   { id: 'diz', label: 'Diz' },
   { id: 'el-bilek', label: 'El & Bilek' },
   { id: 'ayak-bilek', label: 'Ayak & Bilek' },
+  { id: 'diger', label: 'Diğer' },
 ];
 
+const selectedRegionStorageKey = 'fztson-selected-anatomy-region';
+
+function getInitialRegion() {
+  try {
+    const storedRegion = window.sessionStorage.getItem(selectedRegionStorageKey);
+
+    if (storedRegion === 'all') return null;
+    if (bodyRegions.some((region) => region.id === storedRegion)) return storedRegion;
+  } catch {
+    // Depolama erişimi kapalıysa varsayılan bölge kullanılmaya devam eder.
+  }
+
+  return 'boyun';
+}
+
 function AnatomySelector() {
-  const [selectedRegion, setSelectedRegion] = useState('boyun');
+  const [selectedRegion, setSelectedRegion] = useState(getInitialRegion);
   const treatmentsRef = useRef(null);
 
   const showTreatments = (regionId) => {
     setSelectedRegion(regionId);
+
+    try {
+      window.sessionStorage.setItem(selectedRegionStorageKey, regionId ?? 'all');
+    } catch {
+      // Depolama erişimi kapalıysa seçim yalnızca mevcut sayfada korunur.
+    }
+
     requestAnimationFrame(() => {
       treatmentsRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });

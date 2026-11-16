@@ -82,3 +82,28 @@
     gap: 16px 24px;
   }
 }
+
+@media (max-width: 640px) {
+  .header-container {
+    gap: 14px;
+    padding: 14px 18px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .nav-menu {
+    width: 100%;
+    gap: 10px 20px;
+  }
+
+  .nav-menu a {
+    font-size: 12px;
+  }
+
+  .contact-button {
+    padding: 11px 18px;
+    font-size: 12px;
+  }
+}

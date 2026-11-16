@@ -1,16 +1,16 @@
-import skeletonImage from '../../assets/svg/Skeleton_diagram.svg';
+import skeletonImage from '../../assets/images/anatomy-selector-skeleton.webp';
 
 const bodyRegions = [
-  { id: 'cene', label: 'Çene', top: '18%', left: '48%' },
-  { id: 'boyun', label: 'Boyun', top: '23%', left: '48%' },
-  { id: 'omuz', label: 'Omuz', top: '25%', left: '59%' },
-  { id: 'omurga', label: 'Omurga', top: '31%', left: '48%' },
-  { id: 'bel', label: 'Bel ve Sırt', top: '38%', left: '47.5%' },
-  { id: 'kalca', label: 'Kalça', top: '44%', left: '45%' },
-  { id: 'dirsek', label: 'Dirsek', top: '36%', left: '68%' },
-  { id: 'diz', label: 'Diz', top: '63%', left: '39%' },
-  { id: 'el-bilek', label: 'El ve Bilek', top: '44%', left: '17%' },
-  { id: 'ayak-bilek', label: 'Ayak ve Bilek', top: '78%', left: '32%' },
+  { id: 'cene', label: 'Çene', top: '11.7%', left: '50%', mobileTop: '11.3%', mobileLeft: '39%' },
+  { id: 'boyun', label: 'Boyun', top: '15.2%', left: '50%', mobileTop: '15.8%', mobileLeft: '56%' },
+  { id: 'omuz', label: 'Omuz', top: '19.7%', left: '66%' },
+  { id: 'omurga', label: 'Omurga', top: '30.2%', left: '50%', mobileLeft: '44%' },
+  { id: 'bel', label: 'Bel ve Sırt', top: '38.2%', left: '50%', mobileLeft: '56%' },
+  { id: 'kalca', label: 'Kalça', top: '47.4%', left: '50%', mobileLeft: '46%' },
+  { id: 'dirsek', label: 'Dirsek', top: '35.5%', left: '75.2%' },
+  { id: 'diz', label: 'Diz', top: '69.2%', left: '41.6%' },
+  { id: 'el-bilek', label: 'El ve Bilek', top: '48.2%', left: '18.6%' },
+  { id: 'ayak-bilek', label: 'Ayak ve Bilek', top: '91.2%', left: '41.2%' },
 ];
 
 function SkeletonSvg({ selectedRegion, onRegionSelect }) {
@@ -18,7 +18,7 @@ function SkeletonSvg({ selectedRegion, onRegionSelect }) {
     <div className="skeleton-wrapper">
       <img
         src={skeletonImage}
-        alt="Vücut bölgeleri işaretlenmiş insan iskeleti"
+        alt="Vücut bölgelerini seçmek için önden görülen üç boyutlu insan iskeleti"
         className="skeleton-image"
       />
 
@@ -28,7 +28,12 @@ function SkeletonSvg({ selectedRegion, onRegionSelect }) {
           type="button"
           className={`body-point ${selectedRegion === region.id ? 'active' : ''}`}
           data-region={region.id}
-          style={{ top: region.top, left: region.left }}
+          style={{
+            '--point-top': region.top,
+            '--point-left': region.left,
+            '--point-mobile-top': region.mobileTop ?? region.top,
+            '--point-mobile-left': region.mobileLeft ?? region.left,
+          }}
           onClick={() => onRegionSelect(region.id)}
           aria-label={`${region.label} bölgesini seç`}
           aria-pressed={selectedRegion === region.id}

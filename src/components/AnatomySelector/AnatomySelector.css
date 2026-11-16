@@ -45,17 +45,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 395px;
+  min-height: 430px;
   overflow: hidden;
-  background-color: #ffffff;
+  border: 1px solid #dbe5ea;
+  border-radius: 20px;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(217, 239, 237, 0.72), transparent 58%),
+    linear-gradient(145deg, #ffffff 0%, #f7fbfb 100%);
+  box-shadow: 0 18px 45px rgba(6, 39, 71, 0.07);
 }
 
 .skeleton-wrapper {
   position: relative;
-  width: 220px;
-  height: 390px;
-  transform: scale(1.35);
-  transform-origin: 50% 45%;
+  width: 272px;
+  aspect-ratio: 2 / 3;
 }
 
 .skeleton-image {
@@ -67,6 +70,8 @@
 
 .body-point {
   position: absolute;
+  top: var(--point-top);
+  left: var(--point-left);
   z-index: 2;
   width: 34px;
   height: 34px;
@@ -81,12 +86,14 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 7px;
-  height: 7px;
-  border: 1px solid #ffffff;
+  width: 9px;
+  height: 9px;
+  border: 2px solid #ffffff;
   border-radius: 50%;
-  background-color: #8192a2;
-  box-shadow: 0 1px 3px rgba(6, 39, 71, 0.32);
+  background-color: #668092;
+  box-shadow:
+    0 0 0 1px rgba(6, 39, 71, 0.24),
+    0 2px 5px rgba(6, 39, 71, 0.3);
   transform: translate(-50%, -50%);
   transition: width 180ms ease, height 180ms ease, background-color 180ms ease;
 }
@@ -97,13 +104,14 @@
 }
 
 .body-point.active .point-core {
-  width: 11px;
-  height: 11px;
-  background-color: #df202d;
-  border-width: 1px;
+  width: 14px;
+  height: 14px;
+  background-color: #07857d;
+  border-width: 2px;
   box-shadow:
-    0 0 6px 3px rgba(223, 32, 45, 0.32),
-    0 0 15px 7px rgba(223, 32, 45, 0.14);
+    0 0 0 1px rgba(7, 133, 125, 0.3),
+    0 0 7px 4px rgba(7, 133, 125, 0.28),
+    0 0 17px 8px rgba(7, 133, 125, 0.12);
   animation: pointPulse 1.6s ease-in-out infinite;
 }
 
@@ -214,14 +222,16 @@
   0%,
   100% {
     box-shadow:
-      0 0 5px 2px rgba(223, 32, 45, 0.28),
-      0 0 12px 5px rgba(223, 32, 45, 0.12);
+      0 0 0 1px rgba(7, 133, 125, 0.3),
+      0 0 6px 3px rgba(7, 133, 125, 0.25),
+      0 0 14px 6px rgba(7, 133, 125, 0.1);
   }
 
   50% {
     box-shadow:
-      0 0 8px 4px rgba(223, 32, 45, 0.42),
-      0 0 20px 9px rgba(223, 32, 45, 0.16);
+      0 0 0 1px rgba(7, 133, 125, 0.34),
+      0 0 9px 5px rgba(7, 133, 125, 0.36),
+      0 0 22px 10px rgba(7, 133, 125, 0.14);
   }
 }
 
@@ -238,18 +248,17 @@
   }
 
   .skeleton-panel {
-    min-height: 360px;
+    min-height: 350px;
   }
 
   .skeleton-wrapper {
-    width: 190px;
-    height: 340px;
+    width: 214px;
   }
 }
 
 @media (max-width: 640px) {
   .anatomy-section {
-    padding: 44px 18px;
+    padding: 36px 18px;
   }
 
   .anatomy-header {
@@ -267,18 +276,28 @@
 
   .skeleton-panel {
     width: min(100%, 280px);
-    min-height: 350px;
+    min-height: 380px;
     margin: 0 auto;
   }
 
   .skeleton-wrapper {
-    width: 195px;
-    height: 345px;
-    transform: scale(1.38);
+    width: 244px;
+  }
+
+  .body-point {
+    top: var(--point-mobile-top);
+    left: var(--point-mobile-left);
+    width: 40px;
+    height: 40px;
   }
 
   .region-button {
+    height: 48px;
     font-size: 15px;
+  }
+
+  .show-all-button {
+    height: 48px;
   }
 }
 
