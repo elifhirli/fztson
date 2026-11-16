@@ -40,11 +40,6 @@ function SkeletonSvg({ selectedRegion, onRegionSelect }) {
         >
           <span className="point-core" />
           <span className="point-label">{region.label}</span>
-          {(region.id === 'cene' || region.id === 'boyun') && (
-            <span className="mobile-point-name" aria-hidden="true">
-              {region.label}
-            </span>
-          )}
         </button>
       ))}
     </div>
