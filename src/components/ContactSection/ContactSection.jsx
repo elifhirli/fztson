@@ -6,7 +6,7 @@ const contactItems = [
   { label: 'E-posta', value: 'fzt.seyit@gmail.com', icon: '✉', href: 'mailto:fzt.seyit@gmail.com' },
 ];
 
-const googleReviewUrl = 'https://www.google.com/maps?cid=15498848840093985902';
+const googleReviewUrl = 'https://search.google.com/local/writereview?placeid=ChIJJ1SrrM3xhEARbuxGVef4Ftc';
 
 function ContactSection() {
   return (
