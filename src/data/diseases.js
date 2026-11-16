@@ -63,7 +63,10 @@ const regionLabels = {
   'el-bilek': 'El ve Bilek',
   'ayak-bilek': 'Ayak ve Bilek',
   cene: 'Çene',
-  diger: 'Diğer',
+  lenfodem: 'Lenfödem',
+  lipodem: 'Lipödem',
+  'aletli-pilates': 'Aletli Pilates',
+  'pelvik-taban': 'Pelvik Taban',
 };
 
 const processSteps = [
@@ -373,25 +376,25 @@ export const treatments = [
     ['Çene ve kulak çevresinde ağrı', 'Çene hareketleri sırasında ses veya takılma', 'Ağzı açmada zorlanma', 'Çiğneme sırasında rahatsızlık', 'Kulak çınlaması veya uğultu', 'Denge kaybı', 'Baş dönmesi', 'Gerilim tipi baş ağrısı', 'Yüz, baş veya boyun çevresinde eşlik eden gerginlik'],
     { showApproaches: false, heroImage: tmjImage, heroImageAlt: 'Çene eklemi diski ve çiğneme kaslarını gösteren tıbbi illüstrasyon' }),
 
-  disease(54, 'Lenfödem', 'lenfodem', 'diger',
+  disease(54, 'Lenfödem', 'lenfodem', 'lenfodem',
     'Lenf sıvısının dokularda birikmesi kol, bacak veya başka bir bölgede uzun süreli şişliğe ve ağırlık hissine neden olabilir.',
     'Lenfödem yönetimi kişiye göre planlanır. Uzman değerlendirmesi sonrasında cilt bakımı, uygun egzersiz, kompresyon uygulamaları ve gerekli durumlarda manuel lenf drenajı gibi yöntemler birlikte kullanılabilir. Amaç şişliği kontrol etmek, hareketi desteklemek ve kişinin öz yönetim becerilerini geliştirmektir.',
     ['Uzun süreli şişlik', 'Ağırlık veya gerginlik hissi', 'Hareketlerde kısıtlılık', 'Ciltte gerginlik', 'Giysi veya takıların sıkı gelmesi'],
     { showApproaches: false, heroImage: lymphedemaImage, heroImageAlt: 'Bacak lenf yollarını ve lenfödemdeki sıvı birikimini gösteren tıbbi illüstrasyon' }),
 
-  disease(55, 'Lipödem', 'lipodem', 'diger',
+  disease(55, 'Lipödem', 'lipodem', 'lipodem',
     'Lipödem çoğunlukla bacaklarda, bazen kollarda iki taraflı ve orantısız yağ dokusu artışıyla görülebilen kronik bir durumdur.',
     'Lipödemde hassasiyet, ağrı, ağırlık hissi ve kolay morarma görülebilir; ayaklar genellikle etkilenmez. Yönetim kişinin belirtilerine göre planlanır ve eğitim, uygun hareket-egzersiz, cilt bakımı ile uzman değerlendirmesi sonrasında kompresyon seçeneklerini içerebilir.',
     ['İki taraflı orantısız doku artışı', 'Dokunmaya hassasiyet veya ağrı', 'Kolay morarma', 'Bacaklarda ağırlık hissi', 'Uzun süre ayakta kalmada zorlanma'],
     { showApproaches: false, heroImage: lipedemaImage, heroImageAlt: 'Bacaklardaki simetrik lipödem dağılımını gösteren tıbbi illüstrasyon' }),
 
-  disease(56, 'Aletli Pilates — Reformer Pilates', 'aletli-pilates', 'diger',
+  disease(56, 'Aletli Pilates — Reformer Pilates', 'aletli-pilates', 'aletli-pilates',
     'Aletli pilates; yay direnci ve hareketli platform kullanılan reformer cihazıyla kuvvet, hareket kontrolü ve esnekliği desteklemeyi amaçlayan egzersiz yaklaşımıdır.',
     'Program kişinin hareket kapasitesi, hedefleri ve sağlık durumu değerlendirilerek planlanır. Egzersizlerin direnci, hareket aralığı ve zorluk düzeyi kontrollü biçimde ayarlanabilir; gerektiğinde fizyoterapi programının bir parçası olarak uygulanabilir.',
     ['Kuvvet ve dayanıklılığı geliştirme', 'Hareket kontrolünü destekleme', 'Esnekliği artırma', 'Duruş farkındalığı', 'Kişiye göre ayarlanabilir direnç'],
     { showApproaches: false, heroImage: reformerPilatesImage, heroImageAlt: 'Reformer cihazında kontrollü egzersiz yapan anatomik modeli gösteren tıbbi illüstrasyon' }),
 
-  disease(57, 'Pelvik Taban Rehabilitasyonu', 'pelvik-taban-rehabilitasyonu', 'diger',
+  disease(57, 'Pelvik Taban Rehabilitasyonu', 'pelvik-taban-rehabilitasyonu', 'pelvik-taban',
     'Pelvik taban rehabilitasyonu, pelvik taban kaslarının kasılma ve gevşeme işlevlerini değerlendiren ve kişiye özel egzersizlerle destekleyen fizyoterapi alanıdır.',
     'Değerlendirme sonrasında kas farkındalığı, doğru kasılma ve gevşeme, nefes koordinasyonu, mesane alışkanlıkları ve günlük yaşam düzenlemelerine yönelik kişiye özel bir program hazırlanabilir. Gerektiğinde biofeedback gibi destekleyici yöntemlerden yararlanılabilir.',
     ['İdrar kaçırma', 'Pelvik taban kaslarında güçsüzlük', 'Doğum sonrası yakınmalar', 'Pelvik bölgede ağrı veya gerginlik', 'Kasları doğru çalıştırmada zorlanma'],

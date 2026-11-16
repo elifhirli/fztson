@@ -14,7 +14,10 @@ const regionLabels = {
   diz: 'Diz',
   'el-bilek': 'El ve Bilek',
   'ayak-bilek': 'Ayak ve Bilek',
-  diger: 'Diğer',
+  lenfodem: 'Lenfödem',
+  lipodem: 'Lipödem',
+  'aletli-pilates': 'Aletli Pilates',
+  'pelvik-taban': 'Pelvik Taban',
 };
 
 function TreatmentsSection({ selectedRegion, sectionRef }) {

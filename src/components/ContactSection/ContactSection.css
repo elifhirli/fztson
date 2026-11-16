@@ -15,6 +15,71 @@
   font-size: 30px;
 }
 
+.google-review-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  margin: 0 0 34px;
+  padding: 24px 26px;
+  border: 1px solid #d5e2e7;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #ffffff 0%, #f0f9f8 100%);
+  box-shadow: 0 12px 30px rgba(11, 42, 74, 0.07);
+}
+
+.google-review-content {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.google-review-stars {
+  flex: 0 0 auto;
+  color: #f5a623;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.google-review-content h3 {
+  margin: 0;
+  color: #0b2a4a;
+  font-size: 18px;
+}
+
+.google-review-content p {
+  margin: 6px 0 0;
+  color: #526173;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.google-review-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  min-height: 46px;
+  padding: 0 20px;
+  border-radius: 9px;
+  color: #ffffff;
+  background-color: #0b2a4a;
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: background-color 180ms ease, transform 180ms ease;
+}
+
+.google-review-button:hover {
+  background-color: #087b73;
+  transform: translateY(-1px);
+}
+
+.google-review-button:focus-visible {
+  outline: 3px solid rgba(7, 133, 125, 0.22);
+  outline-offset: 3px;
+}
+
 .contact-list {
   display: flex;
   flex-wrap: wrap;
@@ -89,6 +154,25 @@
 
   .contact-container h2 {
     font-size: 26px;
+  }
+
+  .google-review-card,
+  .google-review-content {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .google-review-card {
+    gap: 20px;
+    padding: 22px 20px;
+  }
+
+  .google-review-content {
+    gap: 10px;
+  }
+
+  .google-review-button {
+    width: 100%;
   }
 
   .contact-map {

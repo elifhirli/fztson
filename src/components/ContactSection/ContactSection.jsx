@@ -6,11 +6,30 @@ const contactItems = [
   { label: 'E-posta', value: 'fzt.seyit@gmail.com', icon: '✉', href: 'mailto:fzt.seyit@gmail.com' },
 ];
 
+const googleReviewUrl = 'https://www.google.com/maps?cid=15498848840093985902';
+
 function ContactSection() {
   return (
     <section id="contact" className="contact-section">
       <div className="contact-container">
         <h2>İletişime Geçin</h2>
+        <div className="google-review-card">
+          <div className="google-review-content">
+            <span className="google-review-stars" aria-hidden="true">★★★★★</span>
+            <div>
+              <h3>Deneyiminizi Google’da paylaşın</h3>
+              <p>Görüşleriniz hizmetimizi geliştirmemize ve bizi araştıran kişilere yardımcı olur.</p>
+            </div>
+          </div>
+          <a
+            href={googleReviewUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="google-review-button"
+          >
+            Google’da Yorum Yap <span aria-hidden="true">→</span>
+          </a>
+        </div>
         <ul className="contact-list">
           {contactItems.map((item) => (
             <li key={item.label}>

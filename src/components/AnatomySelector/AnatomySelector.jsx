@@ -14,7 +14,10 @@ const bodyRegions = [
   { id: 'diz', label: 'Diz' },
   { id: 'el-bilek', label: 'El & Bilek' },
   { id: 'ayak-bilek', label: 'Ayak & Bilek' },
-  { id: 'diger', label: 'Diğer' },
+  { id: 'lenfodem', label: 'Lenfödem' },
+  { id: 'lipodem', label: 'Lipödem' },
+  { id: 'aletli-pilates', label: 'Aletli Pilates' },
+  { id: 'pelvik-taban', label: 'Pelvik Taban' },
 ];
 
 const selectedRegionStorageKey = 'fztson-selected-anatomy-region';
