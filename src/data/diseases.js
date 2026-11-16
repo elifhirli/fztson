@@ -47,10 +47,6 @@ import tarsalTunnelImage from '../assets/images/conditions/tarsal-tunnel.webp';
 import achillesRuptureImage from '../assets/images/conditions/achilles-rupture.webp';
 import footDropImage from '../assets/images/conditions/foot-drop.webp';
 import tmjImage from '../assets/images/conditions/tmj-dysfunction.webp';
-import tinnitusImage from '../assets/images/conditions/tinnitus.webp';
-import balanceImage from '../assets/images/conditions/balance-impairment.webp';
-import vertigoImage from '../assets/images/conditions/vertigo.webp';
-import tensionHeadacheImage from '../assets/images/conditions/tension-headache.webp';
 import lymphedemaImage from '../assets/images/conditions/lymphedema.webp';
 import lipedemaImage from '../assets/images/conditions/lipedema.webp';
 import reformerPilatesImage from '../assets/images/conditions/reformer-pilates.webp';
@@ -371,35 +367,11 @@ export const treatments = [
     ['Ayağı yukarı kaldırmada güçlük', 'Yürürken ayağın yere takılması', 'Adım atış biçiminde değişiklik', 'Merdiven kullanımında zorlanma', 'Ayak ve bacakta eşlik eden güçsüzlük'],
     { heroImage: footDropImage, heroImageAlt: 'Ayağın yukarı kaldırılmasındaki zayıflığı ve ilgili siniri gösteren tıbbi illüstrasyon' }),
 
-  disease(49, 'Temporomandibular Eklem Problemleri', 'temporomandibular-eklem-problemleri', 'cene',
+  disease(49, 'Temporomandibular Eklem (TME) / Diş ve Çene Problemleri', 'temporomandibular-eklem-problemleri', 'cene',
     'Çene eklemi ve çevresindeki kasların etkilenmesi çene hareketlerinde ağrı, ses ve günlük fonksiyonlarda zorlanmayla birlikte görülebilir.',
-    'Temporomandibular eklem, alt çeneyi kafatasına bağlayan ve konuşma, çiğneme, esneme gibi hareketlerde görev alan eklemdir. Eklem, çiğneme kasları veya çevredeki yapıların etkilenmesi çeşitli çene yakınmalarına neden olabilir.',
-    ['Çene ve kulak çevresinde ağrı', 'Çene hareketleri sırasında ses veya takılma', 'Ağzı açmada zorlanma', 'Çiğneme sırasında rahatsızlık', 'Kulak çınlaması', 'Denge kaybı', 'Baş dönmesi', 'Gerilim tipi baş ağrısı', 'Yüz, baş veya boyun çevresinde eşlik eden gerginlik'],
+    'Temporomandibular eklem, alt çeneyi kafatasına bağlayan ve konuşma, çiğneme, esneme gibi hareketlerde görev alan eklemdir. Eklem, çiğneme kasları veya çevredeki yapıların etkilenmesi çeşitli çene yakınmalarına neden olabilir. Çene-kulak çevresindeki yakınmaların yanında kulak çınlaması, denge kaybı, baş dönmesi ve gerilim tipi baş ağrısı gibi eşlik eden belirtiler de görülebilir. Bu belirtiler farklı nedenlerle de ortaya çıkabileceğinden kişisel değerlendirme gerekir.',
+    ['Çene ve kulak çevresinde ağrı', 'Çene hareketleri sırasında ses veya takılma', 'Ağzı açmada zorlanma', 'Çiğneme sırasında rahatsızlık', 'Kulak çınlaması veya uğultu', 'Denge kaybı', 'Baş dönmesi', 'Gerilim tipi baş ağrısı', 'Yüz, baş veya boyun çevresinde eşlik eden gerginlik'],
     { showApproaches: false, heroImage: tmjImage, heroImageAlt: 'Çene eklemi diski ve çiğneme kaslarını gösteren tıbbi illüstrasyon' }),
-
-  disease(50, 'Çınlama ve Uğultu', 'cinlama-ve-ugultu', 'cene',
-    'Kulakta dışarıdan bir ses kaynağı olmadan çınlama, uğultu veya benzeri seslerin algılanması tinnitus olarak adlandırılır.',
-    'Çınlama ve uğultu tek başına bir hastalık değil, farklı nedenlerle ortaya çıkabilen bir belirtidir. İşitme sistemiyle ilgili durumların yanı sıra bazı kişilerde çene eklemi, boyun kasları veya duruşla ilişkili etkenlerden de etkilenebilir. Nedenin belirlenmesi için öncelikle kulak burun boğaz uzmanı tarafından değerlendirme yapılması önemlidir.',
-    ['Kulakta çınlama veya uğultu', 'Tek ya da iki kulakta ses algısı', 'Sesin şiddetinde zaman zaman değişiklik', 'Sessiz ortamlarda daha belirgin hissedilme', 'Uyku ve odaklanmada zorlanma'],
-    { showApproaches: false, heroImage: tinnitusImage, heroImageAlt: 'Kulak, işitme yolu ve çene-boyun ilişkisini gösteren tıbbi illüstrasyon' }),
-
-  disease(51, 'Denge Kaybı', 'denge-kaybi', 'cene',
-    'Denge kaybı; ayakta dururken veya yürürken kararsızlık, savrulma ya da düşecekmiş gibi hissetme şeklinde görülebilir.',
-    'Denge; iç kulak, görme, duyu sistemi, kas-iskelet sistemi ve sinir sisteminden gelen bilgilerin birlikte işlenmesiyle sağlanır. Denge kaybının nedeni farklı olabileceği için öncelikle uygun tıbbi değerlendirme yapılması gerekir; fizyoterapi planı değerlendirme sonucuna göre oluşturulabilir.',
-    ['Ayakta dururken kararsızlık', 'Yürürken savrulma', 'Düşme korkusu', 'Ani yön değiştirirken zorlanma', 'Güvensiz yürüme'],
-    { showApproaches: false, heroImage: balanceImage, heroImageAlt: 'Denge sisteminde iç kulak, görme ve vücut duyusunun ilişkisini gösteren tıbbi illüstrasyon' }),
-
-  disease(52, 'Baş Dönmesi — Vertigo', 'bas-donmesi-vertigo', 'cene',
-    'Baş dönmesi; kişinin kendisinin veya çevresinin dönüyor ya da hareket ediyor gibi algılanmasıyla ortaya çıkabilir.',
-    'Baş dönmesi farklı nedenlerle gelişebilen bir belirtidir. İç kulak, nörolojik, dolaşımsal veya diğer tıbbi nedenlerin ayırt edilmesi önemlidir. Uygun görülen durumlarda vestibüler rehabilitasyon; bakış sabitleme, denge ve hareket toleransını geliştirmeye yönelik kişiye özel egzersizleri içerebilir.',
-    ['Dönme hissi', 'Hareketle artan baş dönmesi', 'Bulantı', 'Dengesizlik', 'Bakışları sabitlemede zorlanma'],
-    { showApproaches: false, heroImage: vertigoImage, heroImageAlt: 'İç kulaktaki denge organını ve vestibüler sistemi gösteren tıbbi illüstrasyon' }),
-
-  disease(53, 'Gerilim Tipi Baş Ağrısı', 'gerilim-tipi-bas-agrisi', 'cene',
-    'Gerilim tipi baş ağrısı çoğunlukla başın iki tarafında baskı veya sıkışma hissiyle görülen yaygın bir baş ağrısı türüdür.',
-    'Baş ve boyun çevresinde baskı hissi, kas hassasiyeti ve stresle ilişkili artış görülebilir. Yeni başlayan, şiddetli veya alışılmadık baş ağrılarında öncelikle tıbbi değerlendirme gerekir; fizyoterapi yaklaşımı ancak uygun değerlendirme sonrasında planlanır.',
-    ['Başın iki tarafında baskı hissi', 'Alın veya ense çevresinde sıkışma', 'Boyun ve omuzlarda gerginlik', 'Kas hassasiyeti', 'Stresle artabilen yakınmalar'],
-    { showApproaches: false, heroImage: tensionHeadacheImage, heroImageAlt: 'Baş ve boyun çevresindeki gerilim bölgelerini gösteren tıbbi illüstrasyon' }),
 
   disease(54, 'Lenfödem', 'lenfodem', 'diger',
     'Lenf sıvısının dokularda birikmesi kol, bacak veya başka bir bölgede uzun süreli şişliğe ve ağırlık hissine neden olabilir.',
