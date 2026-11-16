@@ -9,6 +9,7 @@
 
 .anatomy-container {
   width: min(100%, 1120px);
+  min-width: 0;
   margin: 0 auto;
 }
 
@@ -147,6 +148,8 @@
 
 .region-grid {
   display: grid;
+  width: 100%;
+  min-width: 0;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
 }
@@ -270,7 +273,9 @@
   }
 
   .anatomy-layout {
-    grid-template-columns: 1fr;
+    width: 100%;
+    min-width: 0;
+    grid-template-columns: minmax(0, 1fr);
     gap: 26px;
   }
 
@@ -291,17 +296,30 @@
     height: 40px;
   }
 
-  .body-point[data-region='cene'] .point-core {
-    left: calc(50% + 12px);
+  .body-point[data-region='cene'],
+  .body-point[data-region='boyun'] {
+    width: 32px;
+    height: 32px;
   }
 
-  .body-point[data-region='boyun'] .point-core {
-    left: calc(50% - 12px);
+  .point-label {
+    display: none;
+  }
+
+  .region-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
   }
 
   .region-button {
     height: 48px;
-    font-size: 15px;
+    padding: 0 11px;
+    font-size: 13px;
+  }
+
+  .region-arrow {
+    margin-left: 6px;
+    font-size: 20px;
   }
 
   .show-all-button {
@@ -312,15 +330,5 @@
 @media (hover: none), (pointer: coarse) {
   .point-label {
     display: none;
-  }
-}
-
-@media (max-width: 390px) {
-  .region-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .show-all-button {
-    grid-column: auto;
   }
 }
