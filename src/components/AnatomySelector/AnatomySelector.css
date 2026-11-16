@@ -134,6 +134,10 @@
   transition: opacity 160ms ease;
 }
 
+.mobile-point-name {
+  display: none;
+}
+
 .body-point:hover .point-label,
 .body-point:focus-visible .point-label {
   opacity: 1;
@@ -298,8 +302,58 @@
 
   .body-point[data-region='cene'],
   .body-point[data-region='boyun'] {
-    width: 32px;
-    height: 32px;
+    width: 88px;
+    height: 44px;
+  }
+
+  .body-point[data-region='cene'] {
+    transform: translate(-100%, -50%);
+  }
+
+  .body-point[data-region='boyun'] {
+    transform: translate(0, -50%);
+  }
+
+  .body-point[data-region='cene'] .point-core {
+    left: 100%;
+  }
+
+  .body-point[data-region='boyun'] .point-core {
+    left: 0;
+  }
+
+  .mobile-point-name {
+    position: absolute;
+    top: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 58px;
+    height: 34px;
+    padding: 0 10px;
+    border: 1px solid #c8d8df;
+    border-radius: 999px;
+    color: #062747;
+    background-color: rgba(255, 255, 255, 0.94);
+    box-shadow: 0 4px 12px rgba(6, 39, 71, 0.1);
+    font-size: 11px;
+    font-weight: 800;
+    line-height: 1;
+    transform: translateY(-50%);
+  }
+
+  .body-point[data-region='cene'] .mobile-point-name {
+    right: 12px;
+  }
+
+  .body-point[data-region='boyun'] .mobile-point-name {
+    left: 12px;
+  }
+
+  .body-point.active .mobile-point-name {
+    border-color: #07857d;
+    color: #ffffff;
+    background-color: #07857d;
   }
 
   .point-label {
