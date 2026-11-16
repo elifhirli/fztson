@@ -24,11 +24,20 @@ function TreatmentsSection({ selectedRegion, sectionRef }) {
     const normalizedQuery = query.trim().toLocaleLowerCase('tr-TR');
 
     return treatments.filter((treatment) => {
-      const matchesRegion = !selectedRegion || treatment.region === selectedRegion;
+      const matchesRegion = normalizedQuery
+        ? true
+        : !selectedRegion || treatment.region === selectedRegion;
+      const searchableContent = [
+        treatment.title,
+        treatment.description,
+        treatment.overview,
+        treatment.regionLabel,
+        ...treatment.symptoms,
+      ]
+        .join(' ')
+        .toLocaleLowerCase('tr-TR');
       const matchesQuery = !normalizedQuery
-        || `${treatment.title} ${treatment.description}`
-          .toLocaleLowerCase('tr-TR')
-          .includes(normalizedQuery);
+        || searchableContent.includes(normalizedQuery);
 
       return matchesRegion && matchesQuery;
     });
@@ -42,7 +51,9 @@ function TreatmentsSection({ selectedRegion, sectionRef }) {
         <div className="treatments-header">
           <h2>Hastalıklar &amp; Tedaviler</h2>
           <p>
-            {selectedRegionLabel
+            {query.trim()
+              ? `“${query.trim()}” için tüm bölgelerde bulunan sonuçlar.`
+              : selectedRegionLabel
               ? `${selectedRegionLabel} bölgesine yönelik fizyoterapi yaklaşımlarını inceleyin.`
               : 'Tüm bölgeler için fizyoterapi ve rehabilitasyon alanlarını inceleyin.'}
           </p>
